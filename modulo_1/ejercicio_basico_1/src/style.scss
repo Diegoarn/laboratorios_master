@@ -1,0 +1,42 @@
+$base-color: rgb(155, 71, 163);
+$color-letter: rgb(206, 202, 202);
+
+@mixin darken($i) {
+  background-color: darken($base-color, ($i * 5));
+  color: lighten($color-letter, ($i * 10));
+}
+
+@mixin lighten($i) {
+  background-color: lighten($base-color, ($i * 5));
+  color: darken($color-letter, ($i * 10));
+}
+
+@for $i from 1 to 5 {
+  .darken-#{$i} {
+    @include darken($i);
+  }
+}
+
+@for $i from 1 to 5 {
+  .lighten-#{$i} {
+    @include lighten($i);
+  }
+}
+
+div.container-1 {
+  display: flex;
+  padding: 30px;
+
+  div {
+    border: 1px solid rgb(83, 83, 83);
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+
+  .box.base-color {
+    background-color: $base-color;
+    color: $color-letter;
+  }
+
+}

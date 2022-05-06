@@ -1,0 +1,26 @@
+.box{
+    border-radius: 10px;
+}
+
+#box1 {
+    background-color: rgb(190, 228, 207);
+}
+
+#box2 {
+    background-color: rgb(138, 223, 176);
+}
+
+#box3 {
+    background-color: rgb(75, 224, 142);
+}
+
+h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h3 {
+    font-family: cursive;
+}
+
+#box4 {
+    box-shadow: -10px 5px 5px  darkgray;
+}
