@@ -1,0 +1,20 @@
+$colorLetter: rgb(211, 235, 0);
+
+.title {
+  color: $colorLetter;
+  padding-left: 30px;
+  font-size: 300%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  width: 300px;
+}
+
+#root {
+  color: $colorLetter;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150%;
+  padding-left: 30px;
+  width: 40%;
+}
