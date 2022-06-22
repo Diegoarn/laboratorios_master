@@ -1,5 +1,5 @@
-$base-color: rgb(155, 71, 163);
-$color-letter: rgb(206, 202, 202);
+$base-color: rgb(248, 99, 0);
+$color-letter: rgb(150, 148, 148);
 
 @mixin darken($i) {
   background-color: darken($base-color, ($i * 5));

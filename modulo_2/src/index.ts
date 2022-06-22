@@ -6,4 +6,4 @@ import "./01 deliverables/exercise-04.js";
 import "./01 deliverables/exercise-05.js";
 import "./02 challenges/exercise.js";
 
-console.log("Welcome to Exercises Playground.");
+// console.log("Welcome to Exercises Playground.");
