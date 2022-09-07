@@ -12,7 +12,6 @@ export class AuthService {
     this.logout();
     if (username === 'master@lemoncode.net' && password === '12345678') {
       result = true;
-      this.loginUsername = username;
     } else {
       alert('User not valid');
     }

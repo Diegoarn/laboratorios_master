@@ -1,0 +1,32 @@
+<button mat-button [matMenuTriggerFor]="menu" class="button-menu">Menu</button>
+<mat-menu #menu="matMenu" class="customize">
+  <button mat-menu-item class="button-item">
+    <a [routerLink]="['/appprivate/crud']">Crud</a>
+  </button>
+  <button mat-menu-item class="button-item">
+    <a
+      [routerLink]="['/appprivate/galeria']"
+      routerLinkActive="router-link-active"
+      >Galeria</a
+    >
+  </button>
+  <button mat-menu-item class="button-item">
+    <a
+      [routerLink]="['/appprivate/profile']"
+      routerLinkActive="router-link-active"
+      >Profile
+    </a>
+  </button>
+  <button mat-menu-item class="button-item">
+    <a
+      [routerLink]="['/appprivate/dashboard']"
+      routerLinkActive="router-link-active"
+      >Dashboard
+    </a>
+  </button>
+  <button mat-menu-item class="button-item">
+    <a [routerLink]="['/home']" routerLinkActive="router-link-active">Logout</a>
+  </button>
+</mat-menu>
+
+<mat-menu #infoMenu="matMenu" class="customize"></mat-menu>

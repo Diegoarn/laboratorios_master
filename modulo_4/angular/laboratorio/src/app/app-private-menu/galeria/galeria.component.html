@@ -1,1 +1,27 @@
-<p>galeria works!</p>
+<div class="galery-container">
+  <div class="main-pic">
+    <img src="./assets/dir-izq.png" class="direction" (click)="changeImg(0)" />
+    <img
+      src="{{ imgPath }}"
+      [ngClass]="size ? 'img-main-increase' : 'img-main'"
+      id="mainImg"
+    />
+    <img src="./assets/dir.png" class="direction" (click)="changeImg(1)" />
+  </div>
+  <h2>{{ beer }}</h2>
+
+  <div class="button-galery">
+    <button (click)="decreaseImg()">-</button>
+    <button (click)="increaseImg()">+</button>
+    <button (click)="starTimerInit()">play</button>
+    <button (click)="pauseTimer()">stop</button>
+  </div>
+  <div class="carrusel">
+    <img
+      *ngFor="let img of galery"
+      src="{{ img.src }}"
+      class="img-carr"
+      (click)="loadImg(img.id)"
+    />
+  </div>
+</div>

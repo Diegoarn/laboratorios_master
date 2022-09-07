@@ -1,23 +1,33 @@
-<div>
+<div class="login-container">
   <form>
     <div>
-      <label>Username </label>
+      <label class="label">Usuario: </label>
       <input
         name="username"
         [(ngModel)]="username"
         required
         email
-        #username="ngModel"
+        #inputUsername="ngModel"
       />
-      <div *ngIf="username.invalid && username.touched">
-        El username es obligatorio
+      <div *ngIf="inputUsername.invalid && inputUsername.touched">
+        Usuario erróneo o vacio
       </div>
     </div>
     <br />
+
     <div>
-      <label>Password </label>
-      <input name="password" [(ngModel)]="password" required />
+      <label class="label">Password: </label>
+      <input
+        name="password"
+        [(ngModel)]="password"
+        required
+        #inputPassword="ngModel"
+      />
+      <div *ngIf="inputPassword.invalid && inputPassword.touched">
+        El password es obligatorio
+      </div>
     </div>
+    <br />
     <button (click)="loginPage()">Login</button>
   </form>
 </div>

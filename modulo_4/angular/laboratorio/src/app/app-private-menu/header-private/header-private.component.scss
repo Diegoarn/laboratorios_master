@@ -1,0 +1,27 @@
+.private-menu {
+  background-color: rgb(190, 208, 228);
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  align-items: center;
+}
+
+.user {
+  margin-left: 40px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+.menu {
+  margin-left: 40px;
+}
+
+img {
+  width: 12%;
+  margin-right: 3px;
+}
+.al {
+  display: flex;
+  width: 600px;
+  align-items: center;
+}

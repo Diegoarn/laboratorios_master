@@ -1,0 +1,68 @@
+.galery-container {
+  display: flex;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-between;
+}
+
+.main-pic {
+  width: 900px;
+  height: 300px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.img-main {
+  padding: 20px;
+  width: 30vh;
+  height: 30vh;
+}
+
+.img-main-increase {
+  width: 40vh;
+  height: 40vh;
+}
+
+.button-galery {
+  width: 450px;
+  height: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.carrusel {
+  height: 200px;
+  width: 900px;
+  border: 1px solid rgb(175, 191, 192);
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+button {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bolder;
+  color: rgb(161, 161, 148);
+  width: 100px;
+  cursor: pointer;
+}
+
+.img-carr {
+  width: 10%;
+}
+
+.direction {
+  margin-top: 100px;
+  width: 15vh;
+  height: 15vh;
+  cursor: pointer;
+}

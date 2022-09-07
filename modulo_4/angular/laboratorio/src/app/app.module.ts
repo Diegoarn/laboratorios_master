@@ -15,6 +15,11 @@ import { GaleriaComponent } from './app-private-menu/galeria/galeria.component';
 import { DashboardComponent } from './app-private-menu/dashboard/dashboard.component';
 import { ProfileComponent } from './app-private-menu/profile/profile.component';
 import { CrudComponent } from './app-private-menu/crud/crud.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { HeaderComponent } from './app-public-menu/header/header.component';
+import { FooterComponent } from './app-public-menu/footer/footer.component';
+import { MenuPrivateComponent } from './app-private-menu/menu-private/menu-private.component';
+import { HeaderPrivateComponent } from './app-private-menu/header-private/header-private.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +34,10 @@ import { CrudComponent } from './app-private-menu/crud/crud.component';
     DashboardComponent,
     ProfileComponent,
     CrudComponent,
+    HeaderComponent,
+    FooterComponent,
+    MenuPrivateComponent,
+    HeaderPrivateComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +45,7 @@ import { CrudComponent } from './app-private-menu/crud/crud.component';
     NoopAnimationsModule,
     MatSliderModule,
     FormsModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

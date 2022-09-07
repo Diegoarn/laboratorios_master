@@ -1,0 +1,26 @@
+.header-title {
+  font-size: 38px;
+  text-align-last: right;
+  margin: 30px;
+}
+
+img {
+  width: 7%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+  margin-right: 40px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(190, 208, 228);
+}
+
+.menu {
+  margin-left: 40px;
+  margin-top: 15px;
+}

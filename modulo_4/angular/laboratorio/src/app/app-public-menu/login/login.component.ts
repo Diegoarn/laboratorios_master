@@ -12,13 +12,16 @@ export class LoginComponent implements OnInit {
   password = '';
 
   loginPage() {
+    sessionStorage.setItem('usersession', this.username);
     let login = this.authservice.login(this.username, this.password);
-    if (login == true) {
-      this.router.navigate(['/appprivate']);
+    if (login) {
+      this.router.navigate(['/appprivate/crud']);
     }
   }
 
   constructor(private router: Router, private authservice: AuthService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    sessionStorage.removeItem('usersession');
+  }
 }

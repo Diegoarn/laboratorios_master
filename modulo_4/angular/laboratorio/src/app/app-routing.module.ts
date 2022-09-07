@@ -9,6 +9,7 @@ import { CrudComponent } from './app-private-menu/crud/crud.component';
 import { DashboardComponent } from './app-private-menu/dashboard/dashboard.component';
 import { GaleriaComponent } from './app-private-menu/galeria/galeria.component';
 import { ProfileComponent } from './app-private-menu/profile/profile.component';
+import { Guard1Guard } from 'src/guards/guard1.guard';
 
 const routes: Routes = [
   {
@@ -50,6 +51,7 @@ const routes: Routes = [
   {
     path: 'appprivate',
     component: AppPrivateMenuComponent,
+    canActivate: [Guard1Guard],
     children: [
       {
         path: 'crud',
