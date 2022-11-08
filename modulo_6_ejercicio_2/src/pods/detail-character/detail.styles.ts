@@ -1,19 +1,25 @@
 import { css } from 'emotion';
 
 export const root = css`
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
   border: 1px solid black;
+  border-radius: 5px;
   width: 60%;
   height: 100%;
   padding: 16px;
+  background-color: lightgray;
 `;
+
+export const table = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+`;
+
 export const span = css`
-  padding: 20 px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   color: black;
+  padding-top: 24px;
 `;
 
 export const sentence = css`
@@ -28,6 +34,7 @@ export const input = css`
   font-size: 18px;
   padding: 6px;
   width: 60%;
+  border-radius: 5px;
 `;
 export const buton = css`
   font-family: Arial, Helvetica, sans-serif;
@@ -35,4 +42,26 @@ export const buton = css`
   font-size: 18px;
   padding: 6px;
   cursor: pointer;
+`;
+
+export const buton2 = css`
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  padding: 4px;
+  cursor: pointer;
+`;
+
+export const phrases = css`
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+
+  width: 600px;
+`;
+
+export const edit = css`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
 `;

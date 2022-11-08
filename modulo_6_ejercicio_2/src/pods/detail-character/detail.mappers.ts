@@ -6,5 +6,6 @@ export const mapDetailFromApiToVm = (detail): viewModel.DetailVm => ({
   status: detail.status,
   species: detail.species,
   gender: detail.gender,
+  image: detail.image,
   bestSentences: detail.bestSentences,
 });

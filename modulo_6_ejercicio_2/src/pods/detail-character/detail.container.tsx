@@ -1,18 +1,63 @@
 import React from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import * as api from './api';
-import { DetailVm } from './detail.vm';
+import { createEmptyDetail, DetailVm, BestSentence } from './detail.vm';
 import { mapDetailFromApiToVm } from './detail.mappers';
 import { DetailComponent } from './detail.component';
-import { linkRoutes } from 'core/router';
-import { createSentence } from './api';
+import { deleteSentence, upDateSentece } from './api';
 import * as classes from './detail.styles';
+import { linkRoutes } from 'core/router';
+import { useHistory } from 'react-router-dom';
 
 export const DetailContainer: React.FunctionComponent = (props) => {
-  const [detail, setDetail] = React.useState<DetailVm>();
+  const [detail, setDetail] = React.useState<DetailVm>(createEmptyDetail());
   const { id } = useParams<{ id: string }>();
-  const history = useHistory();
   const [newSentence, setSentence] = React.useState('');
+
+  const history = useHistory();
+
+  const handleCreate = async () => {
+    if (newSentence !== '') {
+      const newBestSentence: BestSentence = {
+        id: `${Math.random()}`,
+        phrase: newSentence,
+      };
+
+      const newDetail = {
+        ...detail,
+        bestSentences: [...detail.bestSentences, newBestSentence],
+      };
+
+      setDetail({
+        ...detail,
+        bestSentences: [...detail.bestSentences, newBestSentence],
+      });
+      await upDateSentece(newDetail);
+      history.push(linkRoutes.characterCollection);
+    } else {
+      alert('No text');
+    }
+  };
+
+  const handlerDeleteSentence = async (id) => {
+    const newBestSentences = detail.bestSentences.filter((bestSentence) => {
+      return bestSentence.id !== id;
+    });
+    const newDetail: DetailVm = {
+      ...detail,
+      bestSentences: newBestSentences,
+    };
+    await deleteSentence(newDetail);
+    setDetail(newDetail);
+  };
+
+  const setBestSentences = async (bestSentences) => {
+    setDetail({ ...detail, bestSentences });
+  };
+
+  const upDateBestSentences = async () => {
+    await upDateSentece(detail);
+  };
 
   const handleLoadDetail = async () => {
     const detail = await api.getDetail(id);
@@ -21,10 +66,6 @@ export const DetailContainer: React.FunctionComponent = (props) => {
 
   const handleBack = () => {
     history.push(linkRoutes.characterCollection);
-  };
-
-  const handleCreate = async () => {
-    await createSentence(detail, newSentence);
   };
 
   React.useEffect(() => {
@@ -36,8 +77,14 @@ export const DetailContainer: React.FunctionComponent = (props) => {
   return (
     <>
       <div>
-        <DetailComponent detail={detail} />
+        <DetailComponent
+          detail={detail}
+          onDelete={handlerDeleteSentence}
+          onChangePhrase={setBestSentences}
+          upDateBestSentences={upDateBestSentences}
+        />
       </div>
+      <br />
       <form>
         <h3>Write the best sentence:</h3>
         <input

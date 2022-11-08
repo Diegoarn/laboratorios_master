@@ -8,8 +8,10 @@
       "type": "",
       "gender": "Male",
       "bestSentences": [
-        "OK",
-        "Esta es mi mejor frase"
+        {
+          "id": "0.2575991098390531",
+          "phrase": "Hola"
+        }
       ],
       "origin": {
         "name": "Earth (C-137)",
@@ -84,7 +86,10 @@
       "type": "",
       "gender": "Male",
       "bestSentences": [
-        ""
+        {
+          "id": "0.7812041603998376",
+          "phrase": "aaaaaaaaaaaaaddddddddddd"
+        }
       ],
       "origin": {
         "name": "unknown",
@@ -158,9 +163,7 @@
       "species": "Human",
       "type": "",
       "gender": "Female",
-      "bestSentences": [
-        "Soy Summer"
-      ],
+      "bestSentences": [],
       "origin": {
         "name": "Earth (Replacement Dimension)",
         "url": "https://rickandmortyapi.com/api/location/20"
@@ -288,9 +291,7 @@
       "species": "Human",
       "type": "",
       "gender": "Male",
-      "bestSentences": [
-        "Hola soy Jerry"
-      ],
+      "bestSentences": [],
       "origin": {
         "name": "Earth (Replacement Dimension)",
         "url": "https://rickandmortyapi.com/api/location/20"
@@ -398,7 +399,9 @@
       "species": "Human",
       "type": "",
       "gender": "Male",
-      "bestSentences": [],
+      "bestSentences": [
+        "ssssssssss"
+      ],
       "origin": {
         "name": "unknown",
         "url": ""
@@ -675,9 +678,7 @@
       "species": "Human",
       "type": "Human with ants in his eyes",
       "gender": "Male",
-      "bestSentences": [
-        "Soy Ants"
-      ],
+      "bestSentences": [],
       "origin": {
         "name": "unknown",
         "url": ""
