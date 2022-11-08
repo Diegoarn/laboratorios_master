@@ -12,3 +12,10 @@ export const span = css`
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
 `;
+
+export const buton = css`
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  padding: 3px;
+  cursor: pointer;
+`;

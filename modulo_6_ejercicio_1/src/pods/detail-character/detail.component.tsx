@@ -1,6 +1,8 @@
 import React from 'react';
 import { DetailVm } from './detail.vm';
 import * as classes from './detail.styles';
+import { linkRoutes } from 'core/router';
+import { useHistory } from 'react-router-dom';
 
 interface Props {
   detail: DetailVm;
@@ -8,8 +10,14 @@ interface Props {
 
 export const DetailComponent: React.FunctionComponent<Props> = (props) => {
   const { detail } = props;
-  if (detail != undefined) {
-    return (
+  const history = useHistory();
+
+  const handleBack = () => {
+    history.push(linkRoutes.characterCollection);
+  };
+
+  return (
+    <>
       <table className={classes.root}>
         <tr key={detail.id}>
           <td>
@@ -29,8 +37,10 @@ export const DetailComponent: React.FunctionComponent<Props> = (props) => {
           </td>
         </tr>
       </table>
-    );
-  }
-
-  return <h2>Error</h2>;
+      <br />
+      <button className={classes.buton} onClick={() => handleBack()}>
+        Back
+      </button>
+    </>
+  );
 };

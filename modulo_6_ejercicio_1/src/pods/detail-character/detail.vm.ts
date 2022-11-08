@@ -5,3 +5,11 @@ export interface DetailVm {
   species: string;
   gender: string;
 }
+
+export const createEmptyDetail = (): DetailVm => ({
+  id: '',
+  name: '',
+  status: '',
+  species: '',
+  gender: '',
+});
