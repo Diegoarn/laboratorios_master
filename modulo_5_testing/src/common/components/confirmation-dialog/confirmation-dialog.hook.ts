@@ -16,5 +16,7 @@ export const useConfirmationDialog = () => {
       setIsOpen(true);
       setItemToDelete(item);
     },
+    setIsOpen,
+    setItemToDelete
   };
 };
