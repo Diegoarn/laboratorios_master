@@ -34,7 +34,7 @@ describe('confirmation-dialog', () => {
       onClose: jest.fn(),
       title: 'test title',
       labels: {
-        closeButton: '',
+        closeButton: 'Cancelar',
         acceptButton: '',
       },
       children: '',
@@ -42,7 +42,7 @@ describe('confirmation-dialog', () => {
     // Act
     render(<ConfirmationDialogComponent {...props} />);
 
-    const [buttonCloseElement] = screen.getAllByRole('button');
+    const buttonCloseElement = screen.getByRole('button', { name: 'Cancelar' });
     await userEvent.click(buttonCloseElement);
 
     // Assert
@@ -58,7 +58,7 @@ describe('confirmation-dialog', () => {
       title: 'test title',
       labels: {
         closeButton: '',
-        acceptButton: '',
+        acceptButton: 'Aceptar',
       },
       children: '',
     };
@@ -66,7 +66,9 @@ describe('confirmation-dialog', () => {
     // Act
     render(<ConfirmationDialogComponent {...props} />);
 
-    const [, buttonAcceptElement] = screen.getAllByRole('button');
+    const buttonAcceptElement = screen.getByRole('button', {
+      name: 'Aceptar',
+    });
     await userEvent.click(buttonAcceptElement);
 
     // Assert

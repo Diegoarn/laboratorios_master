@@ -34,7 +34,7 @@ describe('project mapper', () => {
     // Act
     const result = mapProjectFromApiToVm(project);
     // Assert
-    expect(result).toEqual(viewModel.createEmptyProject());
+    expect(result).toEqual(project);
   });
 
   it('should return project object when it feeds with object', () => {
